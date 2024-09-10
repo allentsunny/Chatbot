@@ -1,0 +1,126 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <!-- Meta Tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="keywords" content="Site keywords here">
+		<meta name="description" content="">
+		<meta name='copyright' content=''>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Title -->
+        <title>Mediplus - Free Medical and Doctor Directory HTML Template.</title>
+		
+		<!-- Favicon -->
+        <link rel="icon" href="{% static  'img/favicon.png' %}">
+		
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{% static  'css/bootstrap.min.css' %}">
+		<!-- Nice Select CSS -->
+		<link rel="stylesheet" href="{% static  'css/nice-select.css' %}">
+		<!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="{% static  'css/font-awesome.min.css ' %}">
+		<!-- icofont CSS -->
+        <link rel="stylesheet" href="{% static  'css/icofont.css' %}">
+		<!-- Slicknav -->
+		<link rel="stylesheet" href="{% static  'css/slicknav.min.css' %}">
+		<!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="{% static  'css/owl-carousel.css' %}">
+		<!-- Datepicker CSS -->
+		<link rel="stylesheet" href="{% static  'css/datepicker.css' %}">
+		<!-- Animate CSS -->
+        <link rel="stylesheet" href="{% static  'css/animate.min.css' %}">
+		<!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="{% static  'css/magnific-popup.css' %}">
+		
+		<!-- Medipro CSS -->
+        <link rel="stylesheet" href="{% static  'css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static  'style.css' %}">
+        <link rel="stylesheet" href="{% static  'css/responsive.css' %}">
+		
+    </head>
+<body  >
+
+                    <div class="login">
+                        <p>We Offer Different Services To Improve Your Health</p>
+                        <!-- <img src="img/section-img.png" alt="#"> -->
+                        <h2>Login</h2>
+                    </div>
+                        <div style="margin: auto; width: 300px;">
+                            <div class="container">
+                                <idv class="row">
+                                    <div class="col-lg-12">
+                        
+<form class="input" method="post">
+     {% csrf_token %}
+    {{form.as_p}}
+    <!-- <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <span id="passwordError" class="error"></span> -->
+
+    <button type="submit" id="button">Login</button>
+</form>
+                    </div>
+                </div>
+            </div>
+    
+</body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Login Page</title>
+<style>
+    /* Basic styling for demo purposes */
+    body {
+    background: url("img/log_back.jpg") no-repeat;
+    background-size: cover; /* Ensures the background image covers the entire container */
+    font-family: Arial, sans-serif;
+    margin: 0; /* Shortened margin property */
+}
+
+        
+     */
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+    input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+    button {
+        background-color: #0ce929d3;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer; 
+    }
+    button:hover {
+        background-color: #19f112;
+    }
+    .error {
+        color: red;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+</style>
+</head>
+<body>
+
+
+
+</body>
+</html>
