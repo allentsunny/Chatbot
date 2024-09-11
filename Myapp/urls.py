@@ -7,6 +7,11 @@ urlpatterns = [
     path('login_page/',views.login_page,name='login_page'),
     path('register/',views.register,name='register'),
     path('chat/', views.chatbot_view, name='chatbot_view'),  # Display the chatbot interface
+    path('contact/', views.contact_us, name='contact_us'),
+    path('appointment/', views.appointment_view, name='appointment_view'),
+
+
+
     
 
 ]

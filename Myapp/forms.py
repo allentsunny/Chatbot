@@ -16,11 +16,22 @@ class AppointmentForm(forms.ModelForm):
     class Meta:
         model = Appointment
         fields = ['specialization', 'date', 'contact_number', 'email']
-        widgets = {
-            'date': forms.DateInput(attrs={'type': 'date'}),
-            'specialization': forms.Select(choices=Appointment.SPECIALIZATION_CHOICES),
-        }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['specialization'].empty_label = "Select specialization"
+# forms.py
+
+# forms.py
+
+from django import forms
+from .models import Contact
+
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = ['name', 'email', 'subject', 'message']
+
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Your Name'}),
+            'email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Your Email'}),
+            'subject': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Subject'}),
+            'message': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Message'}),
+        }

@@ -44,11 +44,47 @@
         <link rel="stylesheet" href="{% static  'css/responsive.css' %}">
 		
     </head>
+    <style>
+        /* Basic styling for demo purposes */
+        body  {
+        background: url("{% static 'img/log_back.jpg' %}")no-repeat center/cover;
+        background-size: cover; /* Ensures the background image covers the entire container */
+        font-family: Arial, sans-serif;
+        margin: 0; /* Shortened margin property */
+    }
+    
+            
+         */
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #0ce929d3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer; 
+        }
+        button:hover {
+            background-color: #19f112;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    </style>
 <body  >
 
                     <div class="login">
                         <p>We Offer Different Services To Improve Your Health</p>
-                        <!-- <img src="img/section-img.png" alt="#"> -->
                         <h2>Login</h2>
                     </div>
                         <div style="margin: auto; width: 300px;">
@@ -74,53 +110,4 @@
     
 </body>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simple Login Page</title>
-<style>
-    /* Basic styling for demo purposes */
-    body {
-    background: url("img/log_back.jpg") no-repeat;
-    background-size: cover; /* Ensures the background image covers the entire container */
-    font-family: Arial, sans-serif;
-    margin: 0; /* Shortened margin property */
-}
-
-        
-     */
-    label {
-        display: block;
-        margin-bottom: 8px;
-    }
-    input[type="text"], input[type="password"] {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 20px;
-        box-sizing: border-box;
-    }
-    button {
-        background-color: #0ce929d3;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer; 
-    }
-    button:hover {
-        background-color: #19f112;
-    }
-    .error {
-        color: red;
-        font-size: 12px;
-        margin-top: 5px;
-    }
-</style>
-</head>
-<body>
-
-
-
-</body>
 </html>

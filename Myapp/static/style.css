@@ -308,7 +308,7 @@ body{
 	margin-top:12px;
 }
 .get-quote .btn{
-	background-color: #1ad132;
+	background-color: #08be20;
 	color:#fff;
 }
 .header .logo {
@@ -637,7 +637,7 @@ body{
 	margin:0;
 }
 .slider .single-slider .btn.primary{
-	background:#a30ce9;
+	background:#08be20;
 	color:#fff;
 }
 .slider .single-slider .btn.primary:before{
@@ -710,7 +710,7 @@ Slider Animation
 	text-align: left;
 	z-index:3;
 	border-radius:5px;
-	background:#a30ce9;
+	background:#08be20;
 	 -webkit-transition: all .3s ease-out 0s;
     -moz-transition: all .3s ease-out 0s;
     -ms-transition: all .3s ease-out 0s;
@@ -1323,7 +1323,7 @@ Slider Animation
 }
 .services .single-service i{
 	font-size:45px;
-	color:#a30ce9;
+	color:#08be20;
 	position:absolute;
 	left:0;
 	-webkit-transition:all 0.4s ease;
@@ -1638,7 +1638,7 @@ Slider Animation
 }
 .pricing-table .single-table .icon i{
 	font-size:65px;
-	color:#a30ce9;
+	color:#08be20;
 }
 .pricing-table .single-table .title {
 	font-size: 21px;
@@ -1649,7 +1649,7 @@ Slider Animation
 .pricing-table .single-table .amount {
 	font-size:36px;
 	font-weight:600;
-	color:#a30ce9;
+	color:#08be20;
 }
 .pricing-table .single-table .amount span{
 	display:inline-block;
@@ -1688,7 +1688,7 @@ Slider Animation
 	line-height: 16px;
 	text-align: center;
 	color: #fff;
-	background: #a30ce9;
+	background: #08be20;
 	border-radius: 100%;
 	padding-left: 1px;
 }

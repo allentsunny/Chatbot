@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 from . forms import SignupForm,LoginForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
+
 def index_pro(request):
     return render(request,'index_pro.html')
  
@@ -53,6 +55,8 @@ from django.http import JsonResponse
 from .models import Appointment
 from .nltk_bot import chatbot_response
 
+@login_required
+
 def chatbot_view(request):
     if request.method == 'POST':
         user_input = request.POST.get('message')
@@ -88,11 +92,51 @@ def chatbot_view(request):
                     email=email
                 )
 
+            return redirect('appointment_view')
         return JsonResponse({'response': bot_response})
 
     return render(request, 'chatbot.html')
 
 
+from django.shortcuts import render, redirect
+from .forms import AppointmentForm
+from django.http import HttpResponse
+
+from django.shortcuts import render
+from django.http import HttpResponse
+from .forms import AppointmentForm
+from .models import Appointment
+
+def appointment_view(request):
+    if request.method == 'POST':
+        form = AppointmentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            # Clear session data after saving
+            request.session.pop('appointment_data', None)
+            return HttpResponse("Appointment successfully booked.")
+    else:
+        # Prepopulate form with data from session
+        appointment_data = request.session.get('appointment_data', {})
+        form = AppointmentForm(initial=appointment_data)
+
+    return render(request, 'appointment.html', {'form': form})
 
 
+# views.py
 
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .forms import ContactForm
+
+def contact_us(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your message has been sent successfully!')
+            return redirect('contact_us')
+    else:
+        form = ContactForm()
+    
+    return render(request, 'contact.html', {'form': form})
