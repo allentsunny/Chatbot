@@ -170,7 +170,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: #ebf1f1;
+	color: #0d1b1b;
     font-family: 'Poppins', sans-serif;
 	font-weight:400;
 	font-size: 14px;
@@ -181,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 p {
-	color:#faf4f4;
+	color:#110a0a;
 	margin: 0;
 	line-height:24px;
 	font-weight:400;
