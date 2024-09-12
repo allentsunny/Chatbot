@@ -55,8 +55,8 @@ from django.http import JsonResponse
 from .models import Appointment
 from .nltk_bot import chatbot_response
 
-@login_required
 
+@login_required
 def chatbot_view(request):
     if request.method == 'POST':
         user_input = request.POST.get('message')
@@ -106,6 +106,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import AppointmentForm
 from .models import Appointment
+from django.contrib import messages
+from django.shortcuts import render, redirect
 
 def appointment_view(request):
     if request.method == 'POST':
@@ -114,7 +116,9 @@ def appointment_view(request):
             form.save()
             # Clear session data after saving
             request.session.pop('appointment_data', None)
-            return HttpResponse("Appointment successfully booked.")
+            # Add a success message
+            messages.success(request, "Your appointment has been successfully booked.")
+            return redirect('appointment_success')  # Redirect to a success page
     else:
         # Prepopulate form with data from session
         appointment_data = request.session.get('appointment_data', {})
@@ -123,6 +127,9 @@ def appointment_view(request):
     return render(request, 'appointment.html', {'form': form})
 
 
+
+def appointment_success(request):
+    return render(request, 'success.html')  # Render the success page
 # views.py
 
 from django.shortcuts import render, redirect
@@ -140,3 +147,12 @@ def contact_us(request):
         form = ContactForm()
     
     return render(request, 'contact.html', {'form': form})
+
+
+from django.contrib.auth import logout
+from django.shortcuts import redirect
+
+def logout_view(request):
+    logout(request)
+    return redirect('login_page')  # Redirect to login page or homepage after logout
+

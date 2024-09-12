@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Appointment Confirmation</title>
+    <title>Appointment Success</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
-            background-image: url("{% static 'img/photo_doc4.avif' %}");
+            background-image: url("{% static 'img/photo-doc.avif' %}");
             background-size: cover;
             background-position: center;
             display: flex;
@@ -34,38 +34,19 @@
         a {
             text-decoration: none;
             color: #4CAF50;
+            font-weight: bold;
         }
-        form {
-            margin-top: 20px;
-        }
-        input, button {
-            padding: 10px;
-            margin: 5px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
+        a:hover {
+            color: #388E3C;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>Appointment Successfully Booked</h2>
-        <p>Thank you! Your appointment has been successfully booked.</p>
+        <p>Thank you, your appointment has been successfully booked!</p>
+        <p>We will contact you shortly with more details.</p>
         <a href="{% url 'index_pro' %}">Return to Home</a>
-        
-        <!-- Example form with {{ form.as_p }} and CSRF token -->
-        <form method="POST" action="{% url 'appointment_view' %}">
-            {% csrf_token %}
-            {{ form.as_p }}  <!-- Display form fields as paragraphs -->
-            <button type="submit">Submit</button>
-        </form>
     </div>
 </body>
 </html>

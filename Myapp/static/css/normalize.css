@@ -170,7 +170,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: #424646;
+	color: #ebf1f1;
     font-family: 'Poppins', sans-serif;
 	font-weight:400;
 	font-size: 14px;
@@ -181,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 p {
-	color:#757575;
+	color:#faf4f4;
 	margin: 0;
 	line-height:24px;
 	font-weight:400;
@@ -431,7 +431,7 @@ Preloader Area CSS
 	font-size: 14px;
 	text-transform: capitalize;
 	font-weight: 500;
-	background: #a30ce9;
+	background: #08be20;
 	position: relative;
 	box-shadow: none;
 	display: inline-block;
