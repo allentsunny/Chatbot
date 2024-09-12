@@ -7,7 +7,6 @@
     <title>Appointment Confirmation</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             background-color: #f4f4f9;
             background-image: url("{% static 'img/photo_doc4.avif' %}");
             background-size: cover;
@@ -17,48 +16,89 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         .container {
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+            margin: 20px;
         }
         h2 {
             color: #4CAF50;
+            font-size: 24px;
+            margin-bottom: 15px;
         }
         p {
-            color: #333;
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 25px;
         }
         a {
             text-decoration: none;
             color: #4CAF50;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         form {
             margin-top: 20px;
         }
         input, button {
-            padding: 10px;
-            margin: 5px;
-            border-radius: 5px;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 8px;
             border: 1px solid #ddd;
+            width: calc(100% - 24px);
+            box-sizing: border-box;
+            font-size: 16px;
         }
         button {
             background-color: #4CAF50;
             color: white;
+            border: none;
             cursor: pointer;
+            font-size: 18px;
         }
         button:hover {
             background-color: #45a049;
+        }
+        .specialization {
+            padding: 20px;
+            background-color: #e1f5fe;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .specialization h3 {
+            color: #0288d1;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .specialization p {
+            color: #555;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>Appointment Successfully Booked</h2>
-        <p>Thank you! Your appointment has been successfully booked.</p>
+        <p>Thank you! Your appointment has been successfully booked. We look forward to seeing you.</p>
         <a href="{% url 'index_pro' %}">Return to Home</a>
+        
+        <!-- Specialization section -->
+        <div class="specialization">
+            <h3>Specialization Details</h3>
+            <p>Your appointment is set with a specialist in the chosen field. We will provide you with further details about the specialization and what to expect during your visit.</p>
+        </div>
         
         <!-- Example form with {{ form.as_p }} and CSRF token -->
         <form method="POST" action="{% url 'appointment_view' %}">
